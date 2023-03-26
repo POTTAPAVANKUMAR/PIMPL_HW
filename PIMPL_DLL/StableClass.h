@@ -1,3 +1,6 @@
+#ifndef STABLECLASS_H
+#define STABLECLASS_H
+
 #include "PIMPLDLL_EXPORTS.h"
 #include "BaseStableClass.h"
 
@@ -12,6 +15,11 @@ public:
 	void Method1(int i);
 	void Method2(int i);
 
+	// New functionality
+	int CalculateSum();
+
 private:
 	StableClassImpl* m_Impl;
 };
+
+#endif

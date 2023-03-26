@@ -8,6 +8,11 @@ class StableClassImpl {
 public:
     SomeContainedClass1* m_SomeContainedClass1;
     SomeContainedClass2* m_SomeContainedClass2;
+
+    // New functionality
+    int CalculateSum() {
+        return m_SomeContainedClass1->GetValue() + m_SomeContainedClass2->GetValue();
+    }
 };
 
 StableClass::StableClass(void) : m_Impl(new StableClassImpl())
@@ -29,4 +34,9 @@ void StableClass::Method1(int i)
 void StableClass::Method2(int i)
 {
     // Method2 implementation
+}
+
+// Implementation of new functionality
+int StableClass::CalculateSum() {
+    return m_Impl->CalculateSum();
 }
